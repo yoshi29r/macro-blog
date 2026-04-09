@@ -2,20 +2,19 @@
    Rose Macro Insights — Main JavaScript
    ===================================================== */
 
-// ── NAV: scroll effect & burger ──
+// ── NAV: scroll effect ──
 const nav = document.getElementById('nav');
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobile-menu');
-
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 40);
 });
 
+// ── NAV: burger dropdown ──
+const burger = document.getElementById('burger');
+const dropdown = document.getElementById('nav-dropdown');
+
 burger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  const isOpen = mobileMenu.classList.contains('open');
+  const isOpen = dropdown.classList.toggle('open');
   burger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
-  // animate burger lines
   const spans = burger.querySelectorAll('span');
   if (isOpen) {
     spans[0].style.transform = 'translateY(7px) rotate(45deg)';
@@ -26,36 +25,54 @@ burger.addEventListener('click', () => {
   }
 });
 
-// Close mobile menu on link click
-mobileMenu.querySelectorAll('a').forEach(link => {
+// Close dropdown when clicking a link inside it
+dropdown.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    burger.querySelectorAll('span').forEach(s => {
-      s.style.transform = '';
-      s.style.opacity = '';
-    });
+    dropdown.classList.remove('open');
+    burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   });
+});
+
+// Close dropdown on outside click
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target)) {
+    dropdown.classList.remove('open');
+    burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }
 });
 
 // ── SUBSCRIBE FORM ──
 const form = document.getElementById('subscribe-form');
 const successMsg = document.getElementById('subscribe-success');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+  });
+}
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const input = form.querySelector('input[type="email"]');
-  if (!input.value) return;
-  // Simulate subscription
-  form.style.display = 'none';
-  successMsg.style.display = 'block';
-});
+// ── BLOG FILTER ──
+const filterBtns = document.querySelectorAll('.filter-btn');
+const blogCards = document.querySelectorAll('.blog-card');
+if (filterBtns.length) {
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+      btn.classList.add('filter-btn--active');
+      const filter = btn.dataset.filter;
+      blogCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+}
 
-// ── SCROLL FADE-IN ANIMATION ──
-const observerOptions = {
-  threshold: 0.12,
-  rootMargin: '0px 0px -40px 0px'
-};
-
+// ── SCROLL FADE-IN ──
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -63,26 +80,21 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-// Apply animation to key elements
-const animatedEls = document.querySelectorAll(
-  '.card, .theme-card, .featured__card, .about__inner, .pull-quote'
-);
-animatedEls.forEach((el, i) => {
+document.querySelectorAll('.card, .theme-card, .featured__card, .about__inner, .pull-quote, .blog-card').forEach((el, i) => {
   el.classList.add('fade-in');
-  el.style.transitionDelay = `${(i % 3) * 0.08}s`;
+  el.style.transitionDelay = `${(i % 3) * 0.07}s`;
   observer.observe(el);
 });
 
-// ── SMOOTH ANCHOR SCROLL (with nav offset) ──
+// ── SMOOTH ANCHOR SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    const navHeight = nav.offsetHeight;
-    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+    const top = target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 16;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });

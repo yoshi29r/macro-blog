@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Rose Macro Insights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo">
+        <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
+      </a>
+      <a href="index.html#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
+    </div>
+    <div class="nav__dropdown" id="nav-dropdown">
+      <div class="container nav__dropdown-inner">
+        <nav class="nav__drop-links">
+          <a href="index.html" class="nav__drop-link">
+            <span class="nav__drop-num">01</span>Home
+          </a>
+          <a href="blog.html" class="nav__drop-link nav__drop-link--active">
+            <span class="nav__drop-num">02</span>Blog
+          </a>
+          <a href="index.html#insights" class="nav__drop-link">
+            <span class="nav__drop-num">03</span>Insights
+          </a>
+          <a href="index.html#themes" class="nav__drop-link">
+            <span class="nav__drop-num">04</span>Themen
+          </a>
+          <a href="index.html#about" class="nav__drop-link">
+            <span class="nav__drop-num">05</span>Über mich
+          </a>
+        </nav>
+        <a href="index.html#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="blog-hero__bg"></div>
+    <div class="blog-hero__grid"></div>
+    <div class="container blog-hero__inner">
+      <div class="blog-hero__tag">Alle Beiträge</div>
+      <h1 class="blog-hero__title">
+        Macro <span class="gradient-text">Insights</span><br />Blog
+      </h1>
+      <p class="blog-hero__sub">
+        Tiefenanalysen, Marktkommentare und Einschätzungen zu globalen
+        makroökonomischen Trends — direkt und unabhängig.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="blog-filter">
+    <div class="container blog-filter__inner">
+      <button class="filter-btn filter-btn--active" data-filter="all">Alle</button>
+      <button class="filter-btn" data-filter="zentralbanken">Zentralbanken</button>
+      <button class="filter-btn" data-filter="geopolitik">Geopolitik</button>
+      <button class="filter-btn" data-filter="inflation">Inflation</button>
+      <button class="filter-btn" data-filter="rohstoffe">Rohstoffe</button>
+      <button class="filter-btn" data-filter="europa">Europa</button>
+      <button class="filter-btn" data-filter="china">China</button>
+    </div>
+  </div>
+
+  <!-- BLOG POSTS -->
+  <main class="blog-main">
+    <div class="container blog-grid" id="blog-grid">
+
+      <article class="blog-card" data-category="zentralbanken">
+        <div class="blog-card__top">
+          <span class="tag tag--blue">Zentralbanken</span>
+          <span class="blog-card__date">April 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="artikel/das-ende-der-alten-ordnung.html">
+            Das Ende der alten Ordnung: Warum 2025–2030 ein Jahrzehnt des Bruchs wird
+          </a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Wir stehen am Beginn einer neuen wirtschaftspolitischen Ära. De-Globalisierung,
+          fiskalische Dominanz, ein multipolares Währungssystem — und eine Fed, die zunehmend
+          zwischen zwei unmöglichen Zielen wählen muss.
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">8 Min. Lesezeit</span>
+          <a href="artikel/das-ende-der-alten-ordnung.html" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="zentralbanken">
+        <div class="blog-card__top">
+          <span class="tag tag--blue">Fed &amp; Zinsen</span>
+          <span class="blog-card__date">März 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="#">Higher for Longer? Die Fed und das Dilemma der letzten Meile</a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Inflation nähert sich dem Ziel, doch der Arbeitsmarkt bleibt angespannt.
+          Powell steht vor einer historischen Entscheidung — und die Märkte preisen bereits
+          Zinssenkungen ein, die vielleicht nie kommen.
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">8 Min. Lesezeit</span>
+          <a href="#" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="geopolitik">
+        <div class="blog-card__top">
+          <span class="tag tag--teal">Geopolitik</span>
+          <span class="blog-card__date">März 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="#">BRICS+ und der Dollar: Entdollarisierung als struktureller Trend</a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Der US-Dollar bleibt Reservewährung — aber sein Anteil schrumpft. Was kommt
+          nach Bretton Woods II?
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">11 Min. Lesezeit</span>
+          <a href="#" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="china">
+        <div class="blog-card__top">
+          <span class="tag tag--violet">China</span>
+          <span class="blog-card__date">Februar 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="#">Chinas Deflationsfalle: Immobilienkrise, Schulden und kein Ausweg</a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Evergrande war nur der Anfang. Chinas Immobiliensektor implodiert und Peking
+          kämpft gegen eine japanische Krankheit — dreißig Jahre zu spät.
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">13 Min. Lesezeit</span>
+          <a href="#" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="inflation">
+        <div class="blog-card__top">
+          <span class="tag tag--blue">Inflation</span>
+          <span class="blog-card__date">Februar 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="#">Die neue Inflation: Strukturell, hartnäckig, unvermeidlich</a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Demographie, Deglobalisierung, Dekarbonisierung — die drei D's. Warum die
+          Nullzins-Ära nicht zurückkommt.
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">10 Min. Lesezeit</span>
+          <a href="#" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="europa">
+        <div class="blog-card__top">
+          <span class="tag tag--teal">Europa</span>
+          <span class="blog-card__date">Januar 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="#">Europa im Stagflations-Szenario: Energie, EZB und die Deindustrialisierung</a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Deutschlands Industriemodell erodiert, Energiepreise bleiben strukturell hoch
+          und die EZB navigiert zwischen Inflation und Rezession.
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">9 Min. Lesezeit</span>
+          <a href="#" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+      <article class="blog-card" data-category="rohstoffe">
+        <div class="blog-card__top">
+          <span class="tag tag--violet">Rohstoffe</span>
+          <span class="blog-card__date">Januar 2026</span>
+        </div>
+        <h2 class="blog-card__title">
+          <a href="#">Gold bei 3 000 $: Warum das Edelmetall noch lange nicht fertig ist</a>
+        </h2>
+        <p class="blog-card__excerpt">
+          Zentralbanken kaufen Gold auf Rekordniveau. Der Petrodollar wackelt. Gold ist
+          nicht Spekulation — es ist die rationale Antwort auf fiskalische Dominanz.
+        </p>
+        <div class="blog-card__footer">
+          <span class="blog-card__read">7 Min. Lesezeit</span>
+          <a href="#" class="card__link">Lesen →</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
+        </a>
+        <p class="footer__tagline">Global Macro. Klar analysiert.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Themen</h4>
+          <a href="#">Zentralbanken</a>
+          <a href="#">Geopolitik</a>
+          <a href="#">Inflation</a>
+          <a href="#">Rohstoffe</a>
+        </div>
+        <div class="footer__col">
+          <h4>Blog</h4>
+          <a href="blog.html">Alle Artikel</a>
+          <a href="index.html#insights">Featured</a>
+          <a href="index.html#subscribe">Newsletter</a>
+        </div>
+        <div class="footer__col">
+          <h4>Folgen</h4>
+          <a href="#">Twitter / X</a>
+          <a href="https://www.linkedin.com/in/lennartrose" target="_blank">LinkedIn</a>
+          <a href="#">Substack</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span>© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
+      <span class="footer__disclaimer">Keine Anlageberatung. Nur zur Information.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

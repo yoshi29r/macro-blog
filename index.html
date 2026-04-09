@@ -14,24 +14,35 @@
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav__inner container">
-      <a href="#" class="nav__logo">
-        <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
-      </a>
-      <nav class="nav__links">
-        <a href="#insights">Insights</a>
-        <a href="#themes">Themen</a>
-        <a href="#about">Über mich</a>
-        <a href="#subscribe" class="btn btn--outline">Newsletter</a>
-      </nav>
       <button class="nav__burger" id="burger" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
+      <a href="index.html" class="nav__logo">
+        <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
+      </a>
+      <a href="#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
     </div>
-    <div class="nav__mobile" id="mobile-menu">
-      <a href="#insights">Insights</a>
-      <a href="#themes">Themen</a>
-      <a href="#about">Über mich</a>
-      <a href="#subscribe">Newsletter</a>
+    <div class="nav__dropdown" id="nav-dropdown">
+      <div class="container nav__dropdown-inner">
+        <nav class="nav__drop-links">
+          <a href="index.html" class="nav__drop-link">
+            <span class="nav__drop-num">01</span>Home
+          </a>
+          <a href="blog.html" class="nav__drop-link">
+            <span class="nav__drop-num">02</span>Blog
+          </a>
+          <a href="#insights" class="nav__drop-link">
+            <span class="nav__drop-num">03</span>Insights
+          </a>
+          <a href="#themes" class="nav__drop-link">
+            <span class="nav__drop-num">04</span>Themen
+          </a>
+          <a href="#about" class="nav__drop-link">
+            <span class="nav__drop-num">05</span>Über mich
+          </a>
+        </nav>
+        <a href="#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+      </div>
     </div>
   </header>
 
