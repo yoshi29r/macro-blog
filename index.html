@@ -308,30 +308,72 @@
   <section class="about" id="about">
     <div class="container about__inner">
       <div class="about__image-wrap">
-        <div class="about__image-placeholder">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="about__image-frame">
+          <img
+            src="images/lennart.jpg"
+            alt="Lennart Rose"
+            class="about__photo"
+            onerror="this.parentElement.classList.add('about__image-frame--fallback')"
+          />
+          <svg class="about__photo-fallback" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
         <div class="about__badge">Global Macro</div>
+        <div class="about__social">
+          <a href="https://www.linkedin.com/in/lennartrose" target="_blank" rel="noopener" class="about__social-link" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:roselennart11@gmail.com" class="about__social-link" aria-label="E-Mail">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Kontakt
+          </a>
+        </div>
       </div>
       <div class="about__content">
         <div class="about__tag">Über mich</div>
-        <h2 class="about__title">Rose — <span class="gradient-text">Macro Analyst</span></h2>
+        <h2 class="about__title">Lennart Rose — <span class="gradient-text">Macro Analyst</span></h2>
         <p class="about__text">
-          Ich analysiere globale makroökonomische Trends, Zentralbankpolitik und geopolitische
-          Verschiebungen — mit einem unabhängigen Blick und dem Ziel, komplexe Zusammenhänge
-          klar und verständlich zu machen.
+          Ich bin 22 Jahre alt, studiere Wirtschaftswissenschaften (B.Sc.) an der Universität Kassel
+          und habe dort seit 2022 eine echte Faszination für die Funktionsweise globaler Märkte entwickelt —
+          angetrieben durch das Studium, durch mein persönliches Umfeld und durch die Frage, warum
+          Wirtschaft so selten so erklärt wird, wie sie wirklich funktioniert.
         </p>
         <p class="about__text">
-          Mein Fokus liegt auf den strukturellen Kräften, die Märkte langfristig bewegen:
-          Inflationsregime, Schuldendynamiken, multipolare Weltordnung und die Neugestaltung
-          der globalen Finanzarchitektur. Rose Macro Insights ist mein Ort, um diese Gedanken
-          zu teilen — direkt, tiefgründig, ohne institutionelle Filter.
+          Bevor die Finanzwelt mein Hauptthema wurde, war es der Fußball. Ich habe viele Jahre auf
+          semi-professionellem Niveau gespielt — von der Jugend in Heidelberg bis in den Herrenbereich
+          bei Hessen Kassel und Baunatal in der fünften Liga. Diese Zeit hat mir beigebracht, wie man
+          unter Druck strukturiert denkt, Systeme liest und Entscheidungen trifft — Fähigkeiten, die
+          ich heute anders einsetze.
         </p>
+        <p class="about__text">
+          Praktische Einblicke in Unternehmensfinanzen, Bewertung und Rechnungslegung habe ich als
+          Praktikant und Werkstudent bei <strong>Jakob &amp; Sozien Steuerberatung | Wirtschaftsprüfung</strong>
+          in Kassel gesammelt (August 2023 – Oktober 2025): DCF-Bewertungen, M&amp;A-Beratung,
+          Jahresabschlüsse nach HGB — nah dran an dem, was Zahlen wirklich bedeuten.
+        </p>
+        <p class="about__text">
+          Rose Macro Insights ist mein Weg, makroökonomische Zusammenhänge zugänglich zu machen —
+          ohne institutionellen Filter, aber mit dem Anspruch, den Dingen wirklich auf den Grund zu gehen.
+        </p>
+        <div class="about__credentials">
+          <div class="about__credential">
+            <span class="about__credential-label">Studium</span>
+            <span class="about__credential-val">B.Sc. Wirtschaftswissenschaften · Uni Kassel · seit 2022</span>
+          </div>
+          <div class="about__credential">
+            <span class="about__credential-label">Erfahrung</span>
+            <span class="about__credential-val">Jakob &amp; Sozien Steuerberatung | WP · 2023–2025</span>
+          </div>
+          <div class="about__credential">
+            <span class="about__credential-label">Sport</span>
+            <span class="about__credential-val">Semi-Pro Fußball · Hessen Kassel &amp; Baunatal · bis 2025</span>
+          </div>
+        </div>
         <div class="about__tags">
           <span class="tag tag--blue">Global Macro</span>
           <span class="tag tag--teal">Zentralbanken</span>
           <span class="tag tag--violet">Geopolitik</span>
-          <span class="tag tag--blue">Rohstoffe</span>
+          <span class="tag tag--blue">Bewertung</span>
           <span class="tag tag--teal">Schuldendynamiken</span>
         </div>
       </div>
