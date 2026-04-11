@@ -22,11 +22,17 @@
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
       <div class="nav__right">
-        <div class="lang-switcher">
-          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="fr">FR</button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-dropdown__trigger" id="lang-trigger" aria-label="Sprache wählen" aria-expanded="false">
+            <span id="lang-current">DE</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown__menu">
+            <button class="lang-option" data-lang="de">DE</button>
+            <button class="lang-option" data-lang="en">EN</button>
+            <button class="lang-option" data-lang="es">ES</button>
+            <button class="lang-option" data-lang="fr">FR</button>
+          </div>
         </div>
         <a href="index.html#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
       </div>
@@ -83,7 +89,7 @@
       <!-- April 8, 2026 -->
       <article class="blog-card" data-category="macro-journal">
         <div class="blog-card__top">
-          <span class="tag tag--blue">Macro Journal</span>
+          <span class="tag tag--teal">Macro Journal</span>
           <span class="blog-card__date">April 8, 2026</span>
         </div>
         <h2 class="blog-card__title">
@@ -148,7 +154,7 @@
       <!-- May 4, 2025 -->
       <article class="blog-card" data-category="markets">
         <div class="blog-card__top">
-          <span class="tag tag--teal">Markets</span>
+          <span class="tag tag--blue">Markets</span>
           <span class="blog-card__date">May 4, 2025</span>
         </div>
         <h2 class="blog-card__title">
@@ -170,7 +176,7 @@
       <!-- April 9, 2025 -->
       <article class="blog-card" data-category="geopolitik">
         <div class="blog-card__top">
-          <span class="tag tag--blue">Markets</span>
+          <span class="tag tag--violet">Geopolitics</span>
           <span class="blog-card__date">April 9, 2025</span>
         </div>
         <h2 class="blog-card__title">

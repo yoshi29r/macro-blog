@@ -21,11 +21,17 @@
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
       <div class="nav__right">
-        <div class="lang-switcher">
-          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="fr">FR</button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-dropdown__trigger" id="lang-trigger" aria-label="Sprache wählen" aria-expanded="false">
+            <span id="lang-current">DE</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown__menu">
+            <button class="lang-option" data-lang="de">DE</button>
+            <button class="lang-option" data-lang="en">EN</button>
+            <button class="lang-option" data-lang="es">ES</button>
+            <button class="lang-option" data-lang="fr">FR</button>
+          </div>
         </div>
         <a href="../index.html#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
       </div>
@@ -48,7 +54,7 @@
 
       <header class="artikel__header">
         <div class="artikel__meta">
-          <span class="tag tag--teal">Markets</span>
+          <span class="tag tag--blue">Markets</span>
           <span class="artikel__date">May 4, 2025</span>
           <span class="artikel__read">5 min read</span>
         </div>
@@ -144,7 +150,7 @@
         <h3>More Posts</h3>
         <div class="insights__grid">
           <article class="card">
-            <div class="card__top"><span class="tag tag--blue">Markets</span><span class="card__date">April 9, 2025</span></div>
+            <div class="card__top"><span class="tag tag--violet">Geopolitics</span><span class="card__date">April 9, 2025</span></div>
             <h3 class="card__title">Tariff Rollercoaster</h3>
             <div class="card__footer"><a href="tariff-rollercoaster-april-2025.html" class="card__link">Read →</a><span class="card__read">2 min</span></div>
           </article>

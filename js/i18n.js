@@ -355,39 +355,66 @@ const RMI_T = {
   }
 
   function applyTranslations() {
-    // textContent
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const v = t(el.dataset.i18n);
       if (v) el.textContent = v;
     });
-    // innerHTML (for elements with spans/br)
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const v = t(el.dataset.i18nHtml);
       if (v) el.innerHTML = v;
     });
-    // placeholder
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const v = t(el.dataset.i18nPlaceholder);
       if (v) el.placeholder = v;
     });
-    // lang buttons active state
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('lang-btn--active', btn.dataset.lang === lang);
+    // Update dropdown trigger label
+    const cur = document.getElementById('lang-current');
+    if (cur) cur.textContent = lang.toUpperCase();
+    // Update active state on options
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.classList.toggle('lang-option--active', btn.dataset.lang === lang);
     });
     document.documentElement.lang = lang;
+  }
+
+  function closeLangDropdown() {
+    const dd = document.getElementById('lang-dropdown');
+    if (!dd) return;
+    dd.classList.remove('open');
+    const trig = document.getElementById('lang-trigger');
+    if (trig) trig.setAttribute('aria-expanded', 'false');
   }
 
   function switchLang(newLang) {
     if (!SUPPORTED.includes(newLang)) return;
     lang = newLang;
     localStorage.setItem('rmi-lang', lang);
+    closeLangDropdown();
     applyTranslations();
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+    // Lang option clicks
+    document.querySelectorAll('.lang-option').forEach(btn => {
       btn.addEventListener('click', function () { switchLang(this.dataset.lang); });
     });
+
+    // Dropdown trigger toggle
+    const trigger = document.getElementById('lang-trigger');
+    const dd = document.getElementById('lang-dropdown');
+    if (trigger && dd) {
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = dd.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (dd && !dd.contains(e.target)) closeLangDropdown();
+    });
+
     applyTranslations();
   });
 })();

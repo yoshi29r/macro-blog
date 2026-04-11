@@ -22,11 +22,17 @@
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
       <div class="nav__right">
-        <div class="lang-switcher">
-          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="fr">FR</button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-dropdown__trigger" id="lang-trigger" aria-label="Sprache wählen" aria-expanded="false">
+            <span id="lang-current">DE</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown__menu">
+            <button class="lang-option" data-lang="de">DE</button>
+            <button class="lang-option" data-lang="en">EN</button>
+            <button class="lang-option" data-lang="es">ES</button>
+            <button class="lang-option" data-lang="fr">FR</button>
+          </div>
         </div>
         <a href="#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
       </div>
@@ -91,28 +97,6 @@
     </div>
   </section>
 
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="ticker__track">
-      <span>Fed Funds Rate 4,25-4,50 % <em class="neg">▼</em></span>
-      <span>EUR/USD 1,0823 <em class="pos">▲</em></span>
-      <span>Gold 3 110 USD <em class="pos">▲</em></span>
-      <span>S&amp;P 500 5 202 <em class="neg">▼</em></span>
-      <span>10Y UST 4,42 % <em class="pos">▲</em></span>
-      <span>WTI Crude 68,90 USD <em class="neg">▼</em></span>
-      <span>Bitcoin 78 400 USD <em class="neg">▼</em></span>
-      <span>DXY 103,4 <em class="neg">▼</em></span>
-      <span>Fed Funds Rate 4,25-4,50 % <em class="neg">▼</em></span>
-      <span>EUR/USD 1,0823 <em class="pos">▲</em></span>
-      <span>Gold 3 110 USD <em class="pos">▲</em></span>
-      <span>S&amp;P 500 5 202 <em class="neg">▼</em></span>
-      <span>10Y UST 4,42 % <em class="pos">▲</em></span>
-      <span>WTI Crude 68,90 USD <em class="neg">▼</em></span>
-      <span>Bitcoin 78 400 USD <em class="neg">▼</em></span>
-      <span>DXY 103,4 <em class="neg">▼</em></span>
-    </div>
-  </div>
-
   <!-- FEATURED INSIGHT -->
   <section class="featured container">
     <div class="featured__label" data-i18n="featured.label">Featured</div>
@@ -146,7 +130,7 @@
 
         <article class="card">
           <div class="card__top">
-            <span class="tag tag--blue">Macro Journal</span>
+            <span class="tag tag--teal">Macro Journal</span>
             <span class="card__date">April 2026</span>
           </div>
           <h3 class="card__title">Week of April 8th, 2026 - what's happened</h3>
@@ -179,7 +163,7 @@
 
         <article class="card">
           <div class="card__top">
-            <span class="tag tag--teal">Markets</span>
+            <span class="tag tag--blue">Markets</span>
             <span class="card__date">Mai 2025</span>
           </div>
           <h3 class="card__title">Calendar Week 18 - here's what happened</h3>
@@ -195,7 +179,7 @@
 
         <article class="card">
           <div class="card__top">
-            <span class="tag tag--blue">Geopolitics</span>
+            <span class="tag tag--violet">Geopolitics</span>
             <span class="card__date">April 2025</span>
           </div>
           <h3 class="card__title">Tariff Rollercoaster</h3>
