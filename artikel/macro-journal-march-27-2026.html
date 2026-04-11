@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macro Journal – March 27, 2026 — Rose Macro Insights</title>
+  <title>Macro Journal - March 27, 2026 - Rose Macro Insights</title>
+  <script>(function(){var l=localStorage.getItem('rmi-lang');if(l&&['de','en','es','fr'].includes(l))document.documentElement.lang=l;})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -19,23 +20,31 @@
       <a href="../index.html" class="nav__logo">
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
-      <a href="../index.html#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
+      <div class="nav__right">
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <a href="../index.html#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
+      </div>
     </div>
     <div class="nav__dropdown" id="nav-dropdown">
       <div class="container nav__dropdown-inner">
         <nav class="nav__drop-links">
-          <a href="../index.html" class="nav__drop-link"><span class="nav__drop-num">01</span>Home</a>
-          <a href="../blog.html" class="nav__drop-link nav__drop-link--active"><span class="nav__drop-num">02</span>Blog</a>
-          <a href="../ueber-mich.html" class="nav__drop-link"><span class="nav__drop-num">03</span>Über mich</a>
+          <a href="../index.html" class="nav__drop-link"><span class="nav__drop-num">01</span><span data-i18n="nav.home">Home</span></a>
+          <a href="../blog.html" class="nav__drop-link nav__drop-link--active"><span class="nav__drop-num">02</span><span data-i18n="nav.blog">Blog</span></a>
+          <a href="../ueber-mich.html" class="nav__drop-link"><span class="nav__drop-num">03</span><span data-i18n="nav.about">Über mich</span></a>
         </nav>
-        <a href="../index.html#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+        <a href="../index.html#subscribe" class="btn btn--primary nav__drop-cta" data-i18n="nav.newsletter-cta">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
 
   <main class="artikel">
     <div class="container artikel__inner">
-      <a href="../blog.html" class="artikel__back">← Back to Blog</a>
+      <a href="../blog.html" class="artikel__back" data-i18n="article.back">← Zurück zum Blog</a>
 
       <header class="artikel__header">
         <div class="artikel__meta">
@@ -43,9 +52,9 @@
           <span class="artikel__date">March 27, 2026</span>
           <span class="artikel__read">4 min read</span>
         </div>
-        <h1 class="artikel__title">Macro Journal –<br />March 27, 2026</h1>
+        <h1 class="artikel__title">Macro Journal -<br />March 27, 2026</h1>
         <p class="artikel__lead">
-          Turbulent times — the Fed faces a potential leadership change, dollar strength
+          Turbulent times - the Fed faces a potential leadership change, dollar strength
           is tightening financial conditions, and oil remains stuck above $110. Here are
           this week's key observations.
         </p>
@@ -54,7 +63,7 @@
       <div class="artikel__body">
 
         <p>
-          Turbulent times — not just recently, but no less important for that reason. The Fed faces
+          Turbulent times - not just recently, but no less important for that reason. The Fed faces
           a change in leadership this year: Jerome Powell is set to be replaced by Kevin Warsh, a
           governor currently considered hawkish and one of the Fed's most vocal critics of expansive
           monetary policy and its inflated balance sheet. This could mark a fundamental shift in
@@ -125,8 +134,8 @@
         <h3>More Posts</h3>
         <div class="insights__grid">
           <article class="card">
-            <div class="card__top"><span class="tag tag--blue">Macro Update</span><span class="card__date">April 8, 2026</span></div>
-            <h3 class="card__title">Week of April 8th, 2026 – what's happened</h3>
+            <div class="card__top"><span class="tag tag--blue">Macro Journal</span><span class="card__date">April 8, 2026</span></div>
+            <h3 class="card__title">Week of April 8th, 2026 - what's happened</h3>
             <div class="card__footer"><a href="weekly-update-april-8-2026.html" class="card__link">Read →</a><span class="card__read">6 min</span></div>
           </article>
           <article class="card">
@@ -156,6 +165,7 @@
     </div>
   </footer>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

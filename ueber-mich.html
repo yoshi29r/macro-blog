@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Über mich — Rose Macro Insights</title>
+  <title>Über mich - Rose Macro Insights</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>(function(){var l=localStorage.getItem('rmi-lang');if(l&&['de','en','es','fr'].includes(l))document.documentElement.lang=l;})();</script>
 </head>
 <body>
 
@@ -20,22 +21,30 @@
       <a href="index.html" class="nav__logo">
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
-      <a href="index.html#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
+      <div class="nav__right">
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <a href="index.html#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
+      </div>
     </div>
     <div class="nav__dropdown" id="nav-dropdown">
       <div class="container nav__dropdown-inner">
         <nav class="nav__drop-links">
           <a href="index.html" class="nav__drop-link">
-            <span class="nav__drop-num">01</span>Home
+            <span class="nav__drop-num">01</span><span data-i18n="nav.home">Home</span>
           </a>
           <a href="blog.html" class="nav__drop-link">
-            <span class="nav__drop-num">02</span>Blog
+            <span class="nav__drop-num">02</span><span data-i18n="nav.blog">Blog</span>
           </a>
           <a href="ueber-mich.html" class="nav__drop-link nav__drop-link--active">
-            <span class="nav__drop-num">03</span>Über mich
+            <span class="nav__drop-num">03</span><span data-i18n="nav.about">Über mich</span>
           </a>
         </nav>
-        <a href="index.html#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+        <a href="index.html#subscribe" class="btn btn--primary nav__drop-cta" data-i18n="nav.newsletter-cta">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
@@ -45,12 +54,12 @@
     <div class="about-hero__bg"></div>
     <div class="about-hero__grid"></div>
     <div class="container about-hero__inner">
-      <div class="about-hero__tag">Über mich</div>
+      <div class="about-hero__tag" data-i18n="about-page.tag">Über mich</div>
       <h1 class="about-hero__title">
-        Lennart Rose —<br />
+        Lennart Rose -<br />
         <span class="gradient-text">Macro Analyst</span>
       </h1>
-      <p class="about-hero__sub">
+      <p class="about-hero__sub" data-i18n="about-page.sub">
         22 Jahre. Wirtschaftsstudent. Fasziniert von globalen Märkten,
         Zentralbankpolitik und den strukturellen Kräften, die unsere Wirtschaft formen.
       </p>
@@ -62,15 +71,15 @@
     <div class="container about-page__inner">
 
       <div class="about-page__block">
-        <div class="about-page__label">Wer ich bin</div>
+        <div class="about-page__label" data-i18n="about-page.label1">Wer ich bin</div>
         <p class="about-page__text">
           Ich bin 22 Jahre alt, studiere Wirtschaftswissenschaften (B.Sc.) an der Universität Kassel
-          und habe dort seit 2022 eine echte Faszination für die Funktionsweise globaler Märkte entwickelt —
+          und habe dort seit 2022 eine echte Faszination für die Funktionsweise globaler Märkte entwickelt -
           angetrieben durch das Studium, durch mein persönliches Umfeld und durch die Frage, warum
           Wirtschaft so selten so erklärt wird, wie sie wirklich funktioniert.
         </p>
         <p class="about-page__text">
-          Rose Macro Insights ist mein Weg, makroökonomische Zusammenhänge zugänglich zu machen —
+          Rose Macro Insights ist mein Weg, makroökonomische Zusammenhänge zugänglich zu machen -
           ohne institutionellen Filter, aber mit dem Anspruch, den Dingen wirklich auf den Grund zu gehen.
         </p>
       </div>
@@ -78,54 +87,54 @@
       <div class="about-page__divider"></div>
 
       <div class="about-page__block">
-        <div class="about-page__label">Hintergrund</div>
+        <div class="about-page__label" data-i18n="about-page.label2">Hintergrund</div>
         <p class="about-page__text">
           Bevor die Finanzwelt mein Hauptthema wurde, war es der Fußball. Ich habe viele Jahre auf
-          semi-professionellem Niveau gespielt — von der Jugend in Heidelberg bis in den Herrenbereich
+          semi-professionellem Niveau gespielt - von der Jugend in Heidelberg bis in den Herrenbereich
           bei Hessen Kassel und Baunatal in der fünften Liga. Diese Zeit hat mir beigebracht, wie man
-          unter Druck strukturiert denkt, Systeme liest und Entscheidungen trifft — Fähigkeiten, die
+          unter Druck strukturiert denkt, Systeme liest und Entscheidungen trifft - Fähigkeiten, die
           ich heute anders einsetze.
         </p>
         <p class="about-page__text">
           Praktische Einblicke in Unternehmensfinanzen, Bewertung und Rechnungslegung habe ich als
           Praktikant und Werkstudent bei <strong>Jakob &amp; Sozien Steuerberatung | Wirtschaftsprüfung</strong>
-          in Kassel gesammelt (August 2023 – Oktober 2025): DCF-Bewertungen, M&amp;A-Beratung,
-          Jahresabschlüsse nach HGB — nah dran an dem, was Zahlen wirklich bedeuten.
+          in Kassel gesammelt (August 2023 - Oktober 2025): DCF-Bewertungen, M&amp;A-Beratung,
+          Jahresabschlüsse nach HGB - nah dran an dem, was Zahlen wirklich bedeuten.
         </p>
       </div>
 
       <div class="about-page__divider"></div>
 
       <div class="about-page__block">
-        <div class="about-page__label">Was mich antreibt</div>
+        <div class="about-page__label" data-i18n="about-page.label3">Was mich antreibt</div>
         <div class="about-page__focuses">
           <div class="focus-card">
             <div class="focus-card__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
             </div>
-            <h3>Zentralbanken &amp; Zinsen</h3>
-            <p>Fed, EZB, BoJ — Geldpolitik im Zeitalter fiskalischer Dominanz und hartnäckiger Inflation.</p>
+            <h3 data-i18n="theme1.title">Zentralbanken &amp; Zinsen</h3>
+            <p data-i18n="theme1.desc">Fed, EZB, BoJ - Geldpolitik im Zeitalter fiskalischer Dominanz und hartnäckiger Inflation.</p>
           </div>
           <div class="focus-card">
             <div class="focus-card__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
-            <h3>Geopolitik &amp; Multipolarität</h3>
-            <p>USA vs. China, BRICS+, Dollar-Dominanz und die neue Weltordnung im Entstehen.</p>
+            <h3 data-i18n="theme2.title">Geopolitik &amp; Multipolarität</h3>
+            <p data-i18n="theme2.desc">USA vs. China, BRICS+, Dollar-Dominanz und die neue Weltordnung im Entstehen.</p>
           </div>
           <div class="focus-card">
             <div class="focus-card__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <h3>Schuldendynamiken</h3>
-            <p>Staatsverschuldung auf Rekordniveau weltweit — Wege aus der Schuldenfalle und ihre Folgen.</p>
+            <h3 data-i18n="theme4.title">Schuldendynamiken</h3>
+            <p data-i18n="theme4.desc">Staatsverschuldung auf Rekordniveau weltweit - Wege aus der Schuldenfalle und ihre Folgen.</p>
           </div>
           <div class="focus-card">
             <div class="focus-card__icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
             </div>
-            <h3>Rohstoffe &amp; Energie</h3>
-            <p>Gold, Öl, Kupfer — die Rohstoff-Superzyklus-These und die Energiewende als Preistreiber.</p>
+            <h3 data-i18n="theme5.title">Rohstoffe &amp; Energie</h3>
+            <p data-i18n="theme5.desc">Gold, Öl, Kupfer - die Rohstoff-Superzyklus-These und die Energiewende als Preistreiber.</p>
           </div>
         </div>
       </div>
@@ -133,7 +142,7 @@
       <div class="about-page__divider"></div>
 
       <div class="about-page__block">
-        <div class="about-page__label">Expertise</div>
+        <div class="about-page__label" data-i18n="about-page.label4">Expertise</div>
         <div class="about-page__tags">
           <span class="tag tag--blue">Global Macro</span>
           <span class="tag tag--teal">Zentralbanken</span>
@@ -149,8 +158,8 @@
       <div class="about-page__divider"></div>
 
       <div class="about-page__block">
-        <div class="about-page__label">Kontakt</div>
-        <p class="about-page__text">
+        <div class="about-page__label" data-i18n="about-page.label5">Kontakt</div>
+        <p class="about-page__text" data-i18n="about-page.contact-text">
           Fragen, Feedback oder einfach Interesse am Austausch? Ich freue mich über jede Nachricht.
         </p>
         <div class="about-page__links">
@@ -172,12 +181,12 @@
   <section class="subscribe" id="subscribe">
     <div class="container subscribe__inner">
       <div class="subscribe__glow"></div>
-      <div class="subscribe__tag">Newsletter</div>
-      <h2 class="subscribe__title">
+      <div class="subscribe__tag" data-i18n="subscribe.tag">Newsletter</div>
+      <h2 class="subscribe__title" data-i18n-html="subscribe.title">
         Macro Insights direkt<br />in deinen Posteingang
       </h2>
-      <p class="subscribe__sub">
-        Wöchentliche Tiefenanalysen, Marktkommentare und exklusive Einblicke —
+      <p class="subscribe__sub" data-i18n="subscribe.sub">
+        Wöchentliche Tiefenanalysen, Marktkommentare und exklusive Einblicke -
         kostenlos und ohne Spam.
       </p>
       <form class="subscribe__form" id="subscribe-form">
@@ -187,11 +196,12 @@
           placeholder="deine@email.com"
           required
           aria-label="E-Mail-Adresse"
+          data-i18n-placeholder="subscribe.placeholder"
         />
-        <button type="submit" class="btn btn--primary">Abonnieren</button>
+        <button type="submit" class="btn btn--primary" data-i18n="subscribe.btn">Abonnieren</button>
       </form>
-      <p class="subscribe__note">Kein Spam. Jederzeit abmeldbar.</p>
-      <div class="subscribe__success" id="subscribe-success">
+      <p class="subscribe__note" data-i18n="subscribe.note">Kein Spam. Jederzeit abmeldbar.</p>
+      <div class="subscribe__success" id="subscribe-success" data-i18n="subscribe.success">
         Danke! Du erhältst jetzt wöchentliche Macro Insights.
       </div>
     </div>
@@ -204,35 +214,36 @@
         <a href="index.html" class="nav__logo">
           <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
         </a>
-        <p class="footer__tagline">Global Macro. Klar analysiert.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Global Macro. Klar analysiert.</p>
       </div>
       <div class="footer__links">
         <div class="footer__col">
-          <h4>Seiten</h4>
-          <a href="index.html">Home</a>
-          <a href="blog.html">Blog</a>
-          <a href="ueber-mich.html">Über mich</a>
+          <h4 data-i18n="footer.col1">Seiten</h4>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="blog.html" data-i18n="nav.blog">Blog</a>
+          <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
         </div>
         <div class="footer__col">
-          <h4>Blog</h4>
-          <a href="blog.html">Alle Artikel</a>
-          <a href="artikel/das-ende-der-alten-ordnung.html">Featured</a>
-          <a href="index.html#subscribe">Newsletter</a>
+          <h4 data-i18n="footer.col2">Blog</h4>
+          <a href="blog.html" data-i18n="footer.all-articles">Alle Artikel</a>
+          <a href="artikel/das-ende-der-alten-ordnung.html" data-i18n="footer.featured">Featured</a>
+          <a href="index.html#subscribe" data-i18n="footer.newsletter">Newsletter</a>
         </div>
         <div class="footer__col">
-          <h4>Kontakt</h4>
+          <h4 data-i18n="footer.col3">Kontakt</h4>
           <a href="https://www.linkedin.com/in/lennartrose" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:roselennart11@gmail.com">E-Mail</a>
-          <a href="ueber-mich.html">Über mich</a>
+          <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
         </div>
       </div>
     </div>
     <div class="footer__bottom container">
-      <span>© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
-      <span class="footer__disclaimer">Keine Anlageberatung. Nur zur Information.</span>
+      <span data-i18n="footer.copyright">© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
+      <span class="footer__disclaimer" data-i18n="footer.disclaimer">Keine Anlageberatung. Nur zur Information.</span>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

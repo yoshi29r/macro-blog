@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Rose Macro Insights</title>
+  <title>Blog - Rose Macro Insights</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>(function(){var l=localStorage.getItem('rmi-lang');if(l&&['de','en','es','fr'].includes(l))document.documentElement.lang=l;})();</script>
 </head>
 <body>
 
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav__inner container">
-      <button class="nav__burger" id="burger" aria-label="Open menu">
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
       </button>
       <a href="index.html" class="nav__logo">
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
-      <a href="index.html#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
+      <div class="nav__right">
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <a href="index.html#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
+      </div>
     </div>
     <div class="nav__dropdown" id="nav-dropdown">
       <div class="container nav__dropdown-inner">
         <nav class="nav__drop-links">
-          <a href="index.html" class="nav__drop-link"><span class="nav__drop-num">01</span>Home</a>
-          <a href="blog.html" class="nav__drop-link nav__drop-link--active"><span class="nav__drop-num">02</span>Blog</a>
-          <a href="ueber-mich.html" class="nav__drop-link"><span class="nav__drop-num">03</span>Über mich</a>
+          <a href="index.html" class="nav__drop-link">
+            <span class="nav__drop-num">01</span><span data-i18n="nav.home">Home</span>
+          </a>
+          <a href="blog.html" class="nav__drop-link nav__drop-link--active">
+            <span class="nav__drop-num">02</span><span data-i18n="nav.blog">Blog</span>
+          </a>
+          <a href="ueber-mich.html" class="nav__drop-link">
+            <span class="nav__drop-num">03</span><span data-i18n="nav.about">Über mich</span>
+          </a>
         </nav>
-        <a href="index.html#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+        <a href="index.html#subscribe" class="btn btn--primary nav__drop-cta" data-i18n="nav.newsletter-cta">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
@@ -39,13 +54,13 @@
     <div class="blog-hero__bg"></div>
     <div class="blog-hero__grid"></div>
     <div class="container blog-hero__inner">
-      <div class="blog-hero__tag">All Posts</div>
-      <h1 class="blog-hero__title">
+      <div class="blog-hero__tag" data-i18n="blog.hero.tag">Alle Beiträge</div>
+      <h1 class="blog-hero__title" data-i18n-html="blog.hero.title">
         Macro <span class="gradient-text">Insights</span><br />Blog
       </h1>
-      <p class="blog-hero__sub">
-        Weekly macro updates, market commentary and deep dives into global
-        economic trends — written independently, without institutional filters.
+      <p class="blog-hero__sub" data-i18n="blog.hero.sub">
+        Wöchentliche Macro-Updates, Marktkommentare und Tiefenanalysen zu globalen
+        Wirtschaftstrends - unabhängig, ohne institutionelle Filter.
       </p>
     </div>
   </section>
@@ -53,12 +68,11 @@
   <!-- FILTER BAR -->
   <div class="blog-filter">
     <div class="container blog-filter__inner">
-      <button class="filter-btn filter-btn--active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="macro-update">Macro Update</button>
-      <button class="filter-btn" data-filter="markets">Markets</button>
-      <button class="filter-btn" data-filter="macro-journal">Macro Journal</button>
-      <button class="filter-btn" data-filter="geopolitik">Geopolitics</button>
-      <button class="filter-btn" data-filter="intro">Intro</button>
+      <button class="filter-btn filter-btn--active" data-filter="all" data-i18n="blog.filter.all">Alle</button>
+      <button class="filter-btn" data-filter="macro-journal" data-i18n="blog.filter.mj">Macro Journal</button>
+      <button class="filter-btn" data-filter="markets" data-i18n="blog.filter.markets">Markets</button>
+      <button class="filter-btn" data-filter="geopolitik" data-i18n="blog.filter.geo">Geopolitics</button>
+      <button class="filter-btn" data-filter="intro" data-i18n="blog.filter.intro">Intro</button>
     </div>
   </div>
 
@@ -67,28 +81,28 @@
     <div class="container blog-grid" id="blog-grid">
 
       <!-- April 8, 2026 -->
-      <article class="blog-card" data-category="macro-update">
+      <article class="blog-card" data-category="macro-journal">
         <div class="blog-card__top">
-          <span class="tag tag--blue">Macro Update</span>
+          <span class="tag tag--blue">Macro Journal</span>
           <span class="blog-card__date">April 8, 2026</span>
         </div>
         <h2 class="blog-card__title">
           <a href="artikel/weekly-update-april-8-2026.html">
-            Week of April 8th, 2026 – what's happened
+            Week of April 8th, 2026 - what's happened
           </a>
         </h2>
         <p class="blog-card__excerpt">
-          From the Fed's balance sheet to a striking divergence between gold and oil —
+          From the Fed's balance sheet to a striking divergence between gold and oil -
           a breakdown across liquidity, rates, the dollar, commodities and risk assets.
           Plus: the open question of the day on dollar strength and global liquidity.
         </p>
         <div class="blog-card__footer">
           <span class="blog-card__read">6 min read</span>
-          <a href="artikel/weekly-update-april-8-2026.html" class="card__link">Read →</a>
+          <a href="artikel/weekly-update-april-8-2026.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
         </div>
       </article>
 
-      <!-- March 27, 2026 — Macro Journal -->
+      <!-- March 27, 2026 - Macro Journal -->
       <article class="blog-card" data-category="macro-journal">
         <div class="blog-card__top">
           <span class="tag tag--teal">Macro Journal</span>
@@ -96,21 +110,21 @@
         </div>
         <h2 class="blog-card__title">
           <a href="artikel/macro-journal-march-27-2026.html">
-            Macro Journal – March 27, 2026
+            Macro Journal - March 27, 2026
           </a>
         </h2>
         <p class="blog-card__excerpt">
-          The Fed faces a leadership change. Kevin Warsh — one of the Fed's biggest critics —
+          The Fed faces a leadership change. Kevin Warsh - one of the Fed's biggest critics -
           is set to replace Powell. Meanwhile the dollar is strengthening against the
           administration's wishes, and oil remains stuck above $110.
         </p>
         <div class="blog-card__footer">
           <span class="blog-card__read">4 min read</span>
-          <a href="artikel/macro-journal-march-27-2026.html" class="card__link">Read →</a>
+          <a href="artikel/macro-journal-march-27-2026.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
         </div>
       </article>
 
-      <!-- March 27, 2026 — Blog Overview -->
+      <!-- March 27, 2026 - Blog Overview -->
       <article class="blog-card" data-category="intro">
         <div class="blog-card__top">
           <span class="tag tag--violet">Intro</span>
@@ -122,12 +136,12 @@
           </a>
         </h2>
         <p class="blog-card__excerpt">
-          How this blog is structured: the five blocks I track each week — Liquidity, Rates,
-          Dollar, Commodities, Risk Assets — and the exact indicators and data sources behind each.
+          How this blog is structured: the five blocks I track each week - Liquidity,
+          Rates, Dollar, Commodities, Risk Assets - and the exact indicators and data sources behind each.
         </p>
         <div class="blog-card__footer">
           <span class="blog-card__read">3 min read</span>
-          <a href="artikel/blog-overview-approach.html" class="card__link">Read →</a>
+          <a href="artikel/blog-overview-approach.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
         </div>
       </article>
 
@@ -139,17 +153,17 @@
         </div>
         <h2 class="blog-card__title">
           <a href="artikel/cw18-may-2025.html">
-            Calendar Week 18 – here's what happened
+            Calendar Week 18 - here's what happened
           </a>
         </h2>
         <p class="blog-card__excerpt">
           Job report surprises, commodities dragging and a potential trade solution in sight?
-          April's volatility gave way to cautious optimism — Bitcoin up 30% from lows,
+          April's volatility gave way to cautious optimism - Bitcoin up 30% from lows,
           Solana +54%, Sui +112%. I remain bullish.
         </p>
         <div class="blog-card__footer">
           <span class="blog-card__read">5 min read</span>
-          <a href="artikel/cw18-may-2025.html" class="card__link">Read →</a>
+          <a href="artikel/cw18-may-2025.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
         </div>
       </article>
 
@@ -166,12 +180,12 @@
         </h2>
         <p class="blog-card__excerpt">
           Markets completed a 180-degree turnaround as Trump announced a 90-day pause on
-          the sweeping tariffs just imposed on most of the world. My very first post —
+          the sweeping tariffs just imposed on most of the world. My very first post -
           written on a genuinely historic day.
         </p>
         <div class="blog-card__footer">
           <span class="blog-card__read">2 min read</span>
-          <a href="artikel/tariff-rollercoaster-april-2025.html" class="card__link">Read →</a>
+          <a href="artikel/tariff-rollercoaster-april-2025.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
         </div>
       </article>
 
@@ -185,35 +199,36 @@
         <a href="index.html" class="nav__logo">
           <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
         </a>
-        <p class="footer__tagline">Global Macro. Clearly analysed.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Global Macro. Klar analysiert.</p>
       </div>
       <div class="footer__links">
         <div class="footer__col">
-          <h4>Seiten</h4>
-          <a href="index.html">Home</a>
-          <a href="blog.html">Blog</a>
-          <a href="ueber-mich.html">Über mich</a>
+          <h4 data-i18n="footer.col1">Seiten</h4>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="blog.html" data-i18n="nav.blog">Blog</a>
+          <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
         </div>
         <div class="footer__col">
-          <h4>Blog</h4>
-          <a href="blog.html">Alle Artikel</a>
-          <a href="artikel/das-ende-der-alten-ordnung.html">Featured</a>
-          <a href="index.html#subscribe">Newsletter</a>
+          <h4 data-i18n="footer.col2">Blog</h4>
+          <a href="blog.html" data-i18n="footer.all-articles">Alle Artikel</a>
+          <a href="artikel/das-ende-der-alten-ordnung.html" data-i18n="footer.featured">Featured</a>
+          <a href="index.html#subscribe" data-i18n="footer.newsletter">Newsletter</a>
         </div>
         <div class="footer__col">
-          <h4>Kontakt</h4>
+          <h4 data-i18n="footer.col3">Kontakt</h4>
           <a href="https://www.linkedin.com/in/lennartrose" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:roselennart11@gmail.com">E-Mail</a>
-          <a href="ueber-mich.html">Über mich</a>
+          <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
         </div>
       </div>
     </div>
     <div class="footer__bottom container">
-      <span>© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
-      <span class="footer__disclaimer">Keine Anlageberatung. Nur zur Information.</span>
+      <span data-i18n="footer.copyright">© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
+      <span class="footer__disclaimer" data-i18n="footer.disclaimer">Keine Anlageberatung. Nur zur Information.</span>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

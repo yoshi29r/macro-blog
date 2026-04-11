@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Das Ende der alten Ordnung — Rose Macro Insights</title>
+  <title>Das Ende der alten Ordnung - Rose Macro Insights</title>
+  <script>(function(){var l=localStorage.getItem('rmi-lang');if(l&&['de','en','es','fr'].includes(l))document.documentElement.lang=l;})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -21,16 +22,24 @@
       <a href="../index.html" class="nav__logo">
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
-      <a href="../index.html#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
+      <div class="nav__right">
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <a href="../index.html#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
+      </div>
     </div>
     <div class="nav__dropdown" id="nav-dropdown">
       <div class="container nav__dropdown-inner">
         <nav class="nav__drop-links">
-          <a href="../index.html" class="nav__drop-link"><span class="nav__drop-num">01</span>Home</a>
-          <a href="../blog.html" class="nav__drop-link nav__drop-link--active"><span class="nav__drop-num">02</span>Blog</a>
-          <a href="../ueber-mich.html" class="nav__drop-link"><span class="nav__drop-num">03</span>Über mich</a>
+          <a href="../index.html" class="nav__drop-link"><span class="nav__drop-num">01</span><span data-i18n="nav.home">Home</span></a>
+          <a href="../blog.html" class="nav__drop-link nav__drop-link--active"><span class="nav__drop-num">02</span><span data-i18n="nav.blog">Blog</span></a>
+          <a href="../ueber-mich.html" class="nav__drop-link"><span class="nav__drop-num">03</span><span data-i18n="nav.about">Über mich</span></a>
         </nav>
-        <a href="../index.html#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+        <a href="../index.html#subscribe" class="btn btn--primary nav__drop-cta" data-i18n="nav.newsletter-cta">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
@@ -40,7 +49,7 @@
     <div class="container artikel__inner">
 
       <!-- Zurück -->
-      <a href="../blog.html" class="artikel__back">← Zurück zum Blog</a>
+      <a href="../blog.html" class="artikel__back" data-i18n="article.back">← Zurück zum Blog</a>
 
       <!-- Header -->
       <header class="artikel__header">
@@ -202,6 +211,7 @@
     </div>
   </footer>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>(function(){var l=localStorage.getItem('rmi-lang');if(l&&['de','en','es','fr'].includes(l))document.documentElement.lang=l;})();</script>
 </head>
 <body>
 
@@ -20,22 +21,30 @@
       <a href="index.html" class="nav__logo">
         <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
       </a>
-      <a href="#subscribe" class="btn btn--outline nav__cta">Newsletter</a>
+      <div class="nav__right">
+        <div class="lang-switcher">
+          <button class="lang-btn lang-btn--active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+        <a href="#subscribe" class="btn btn--outline nav__cta" data-i18n="nav.newsletter">Newsletter</a>
+      </div>
     </div>
     <div class="nav__dropdown" id="nav-dropdown">
       <div class="container nav__dropdown-inner">
         <nav class="nav__drop-links">
           <a href="index.html" class="nav__drop-link nav__drop-link--active">
-            <span class="nav__drop-num">01</span>Home
+            <span class="nav__drop-num">01</span><span data-i18n="nav.home">Home</span>
           </a>
           <a href="blog.html" class="nav__drop-link">
-            <span class="nav__drop-num">02</span>Blog
+            <span class="nav__drop-num">02</span><span data-i18n="nav.blog">Blog</span>
           </a>
           <a href="ueber-mich.html" class="nav__drop-link">
-            <span class="nav__drop-num">03</span>Über mich
+            <span class="nav__drop-num">03</span><span data-i18n="nav.about">Über mich</span>
           </a>
         </nav>
-        <a href="#subscribe" class="btn btn--primary nav__drop-cta">Newsletter abonnieren</a>
+        <a href="#subscribe" class="btn btn--primary nav__drop-cta" data-i18n="nav.newsletter-cta">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
@@ -45,39 +54,39 @@
     <div class="hero__bg"></div>
     <div class="hero__grid"></div>
     <div class="container hero__inner">
-      <div class="hero__tag">Global Macro Analysis</div>
-      <h1 class="hero__title">
+      <div class="hero__tag" data-i18n="hero.tag">Global Macro Analysis</div>
+      <h1 class="hero__title" data-i18n-html="hero.title">
         Die Welt durch<br />
         <span class="gradient-text">makroökonomische</span><br />
         Augen sehen
       </h1>
-      <p class="hero__sub">
+      <p class="hero__sub" data-i18n="hero.sub">
         Tiefenanalysen zu globalen Märkten, Zentralbankpolitik, geopolitischen
-        Verschiebungen und strukturellen Trends — unabhängig, klar, visionär.
+        Verschiebungen und strukturellen Trends - unabhängig, klar, visionär.
       </p>
       <div class="hero__actions">
-        <a href="#insights" class="btn btn--primary">Neueste Insights</a>
-        <a href="#subscribe" class="btn btn--ghost">Newsletter abonnieren</a>
+        <a href="#insights" class="btn btn--primary" data-i18n="hero.cta1">Neueste Insights</a>
+        <a href="#subscribe" class="btn btn--ghost" data-i18n="hero.cta2">Newsletter abonnieren</a>
       </div>
       <div class="hero__stats">
         <div class="stat">
           <span class="stat__val">50+</span>
-          <span class="stat__label">Analysen</span>
+          <span class="stat__label" data-i18n="hero.stat1-label">Analysen</span>
         </div>
         <div class="stat__divider"></div>
         <div class="stat">
           <span class="stat__val">12</span>
-          <span class="stat__label">Märkte</span>
+          <span class="stat__label" data-i18n="hero.stat2-label">Märkte</span>
         </div>
         <div class="stat__divider"></div>
         <div class="stat">
-          <span class="stat__val">Wöchentlich</span>
-          <span class="stat__label">Updates</span>
+          <span class="stat__val" data-i18n="hero.stat3-val">Wöchentlich</span>
+          <span class="stat__label" data-i18n="hero.stat3-label">Updates</span>
         </div>
       </div>
     </div>
     <div class="hero__scroll">
-      <span>Scrollen</span>
+      <span data-i18n="hero.scroll">Scrollen</span>
       <div class="hero__scroll-line"></div>
     </div>
   </section>
@@ -85,7 +94,7 @@
   <!-- TICKER -->
   <div class="ticker">
     <div class="ticker__track">
-      <span>Fed Funds Rate 4,25–4,50 % <em class="neg">▼</em></span>
+      <span>Fed Funds Rate 4,25-4,50 % <em class="neg">▼</em></span>
       <span>EUR/USD 1,0823 <em class="pos">▲</em></span>
       <span>Gold 3 110 USD <em class="pos">▲</em></span>
       <span>S&amp;P 500 5 202 <em class="neg">▼</em></span>
@@ -93,7 +102,7 @@
       <span>WTI Crude 68,90 USD <em class="neg">▼</em></span>
       <span>Bitcoin 78 400 USD <em class="neg">▼</em></span>
       <span>DXY 103,4 <em class="neg">▼</em></span>
-      <span>Fed Funds Rate 4,25–4,50 % <em class="neg">▼</em></span>
+      <span>Fed Funds Rate 4,25-4,50 % <em class="neg">▼</em></span>
       <span>EUR/USD 1,0823 <em class="pos">▲</em></span>
       <span>Gold 3 110 USD <em class="pos">▲</em></span>
       <span>S&amp;P 500 5 202 <em class="neg">▼</em></span>
@@ -106,22 +115,22 @@
 
   <!-- FEATURED INSIGHT -->
   <section class="featured container">
-    <div class="featured__label">Featured</div>
+    <div class="featured__label" data-i18n="featured.label">Featured</div>
     <div class="featured__card">
       <div class="featured__meta">
         <span class="tag tag--blue">Zentralbanken</span>
         <span class="featured__date">April 2026</span>
       </div>
       <h2 class="featured__title">
-        Das Ende der alten Ordnung: Warum 2025–2030 ein Jahrzehnt des Bruchs wird
+        Das Ende der alten Ordnung: Warum 2025-2030 ein Jahrzehnt des Bruchs wird
       </h2>
       <p class="featured__excerpt">
         Wir stehen am Beginn einer neuen wirtschaftspolitischen Ära. Die Koordinaten verschieben sich:
-        De-Globalisierung, fiskalische Dominanz, ein multipolares Währungssystem — und eine Fed,
+        De-Globalisierung, fiskalische Dominanz, ein multipolares Währungssystem - und eine Fed,
         die zunehmend zwischen zwei unmöglichen Zielen wählen muss. Was bedeutet das für Portfolios,
         für Staaten und für die Weltwirtschaft?
       </p>
-      <a href="artikel/das-ende-der-alten-ordnung.html" class="btn btn--primary">Analyse lesen</a>
+      <a href="artikel/das-ende-der-alten-ordnung.html" class="btn btn--primary" data-i18n="featured.cta">Analyse lesen</a>
     </div>
   </section>
 
@@ -129,115 +138,97 @@
   <section class="insights" id="insights">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Neueste <span class="gradient-text">Insights</span></h2>
-        <p class="section-sub">Wöchentliche Tiefenanalysen zu globalen Makrothemen</p>
+        <h2 class="section-title" data-i18n-html="insights.title">Neueste <span class="gradient-text">Insights</span></h2>
+        <p class="section-sub" data-i18n="insights.sub">Wöchentliche Tiefenanalysen zu globalen Makrothemen</p>
       </div>
 
       <div class="insights__grid">
 
         <article class="card">
           <div class="card__top">
-            <span class="tag tag--blue">Fed &amp; Zinsen</span>
+            <span class="tag tag--blue">Macro Journal</span>
+            <span class="card__date">April 2026</span>
+          </div>
+          <h3 class="card__title">Week of April 8th, 2026 - what's happened</h3>
+          <p class="card__excerpt">
+            From the Fed's balance sheet to a striking divergence between gold and oil -
+            a breakdown across liquidity, rates, the dollar, commodities and risk assets.
+          </p>
+          <div class="card__footer">
+            <a href="artikel/weekly-update-april-8-2026.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
+            <span class="card__read">6 Min.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <span class="tag tag--teal">Macro Journal</span>
             <span class="card__date">März 2026</span>
           </div>
-          <h3 class="card__title">Higher for Longer? Die Fed und das Dilemma der letzten Meile</h3>
+          <h3 class="card__title">Macro Journal - March 27, 2026</h3>
           <p class="card__excerpt">
-            Inflation nähert sich dem Ziel, doch der Arbeitsmarkt bleibt angespannt.
-            Powell steht vor einer historischen Entscheidung — und die Märkte preisen bereits
-            Zinssenkungen ein, die vielleicht nie kommen.
+            The Fed faces a leadership change. Kevin Warsh is set to replace Powell.
+            Meanwhile the dollar is strengthening against the administration's wishes,
+            and oil remains stuck above $110.
           </p>
           <div class="card__footer">
-            <a href="#" class="card__link">Lesen →</a>
-            <span class="card__read">8 Min.</span>
+            <a href="artikel/macro-journal-march-27-2026.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
+            <span class="card__read">4 Min.</span>
           </div>
         </article>
 
         <article class="card">
           <div class="card__top">
-            <span class="tag tag--teal">Geopolitik</span>
+            <span class="tag tag--teal">Markets</span>
+            <span class="card__date">Mai 2025</span>
+          </div>
+          <h3 class="card__title">Calendar Week 18 - here's what happened</h3>
+          <p class="card__excerpt">
+            Job report surprises, commodities dragging and a potential trade solution in sight?
+            April's volatility gave way to cautious optimism - Bitcoin up 30% from lows.
+          </p>
+          <div class="card__footer">
+            <a href="artikel/cw18-may-2025.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
+            <span class="card__read">5 Min.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <span class="tag tag--blue">Geopolitics</span>
+            <span class="card__date">April 2025</span>
+          </div>
+          <h3 class="card__title">Tariff Rollercoaster</h3>
+          <p class="card__excerpt">
+            Markets completed a 180-degree turnaround as Trump announced a 90-day pause
+            on sweeping tariffs. My very first post - written on a genuinely historic day.
+          </p>
+          <div class="card__footer">
+            <a href="artikel/tariff-rollercoaster-april-2025.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
+            <span class="card__read">2 Min.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <span class="tag tag--violet">Intro</span>
             <span class="card__date">März 2026</span>
           </div>
-          <h3 class="card__title">BRICS+ und der Dollar: Entdollarisierung als struktureller Trend</h3>
+          <h3 class="card__title">Blog Overview &amp; Approach</h3>
           <p class="card__excerpt">
-            Der US-Dollar bleibt Reservewährung — aber sein Anteil schrumpft. Russland,
-            China und Saudi-Arabien bauen alternative Zahlungsarchitekturen. Was kommt nach
-            Bretton Woods II?
+            How this blog is structured: the five blocks I track each week - Liquidity,
+            Rates, Dollar, Commodities, Risk Assets - and the exact indicators behind each.
           </p>
           <div class="card__footer">
-            <a href="#" class="card__link">Lesen →</a>
-            <span class="card__read">11 Min.</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__top">
-            <span class="tag tag--violet">China</span>
-            <span class="card__date">Februar 2026</span>
-          </div>
-          <h3 class="card__title">Chinas Deflationsfalle: Immobilienkrise, Schulden und kein Ausweg</h3>
-          <p class="card__excerpt">
-            Evergrande war nur der Anfang. Chinas Immobiliensektor implodiert, die Binnennachfrage
-            schwächelt, und Peking kämpft gegen eine japanische Krankheit — dreißig Jahre zu spät.
-          </p>
-          <div class="card__footer">
-            <a href="#" class="card__link">Lesen →</a>
-            <span class="card__read">13 Min.</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__top">
-            <span class="tag tag--blue">Inflation</span>
-            <span class="card__date">Februar 2026</span>
-          </div>
-          <h3 class="card__title">Die neue Inflation: Strukturell, hartnäckig, unvermeidlich</h3>
-          <p class="card__excerpt">
-            Demographie, Deglobalisierung, Dekarbonisierung — die drei D's der strukturellen
-            Inflation. Warum die Nullzins-Ära nicht zurückkommt und was das für Anleihen bedeutet.
-          </p>
-          <div class="card__footer">
-            <a href="#" class="card__link">Lesen →</a>
-            <span class="card__read">10 Min.</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__top">
-            <span class="tag tag--teal">Europa</span>
-            <span class="card__date">Januar 2026</span>
-          </div>
-          <h3 class="card__title">Europa im Stagflations-Szenario: Energie, EZB und die Deindustrialisierung</h3>
-          <p class="card__excerpt">
-            Deutschlands Industriemodel erodiert, Energiepreise bleiben strukturell hoch,
-            und die EZB navigiert zwischen Inflation und Rezession. Ein Kontinent am Scheideweg.
-          </p>
-          <div class="card__footer">
-            <a href="#" class="card__link">Lesen →</a>
-            <span class="card__read">9 Min.</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__top">
-            <span class="tag tag--violet">Rohstoffe</span>
-            <span class="card__date">Januar 2026</span>
-          </div>
-          <h3 class="card__title">Gold bei 3 000 $: Warum das Edelmetall noch lange nicht fertig ist</h3>
-          <p class="card__excerpt">
-            Zentralbanken kaufen Gold auf Rekordniveau. Der Petrodollar wackelt. Reale Zinsen
-            bleiben negativ. Gold ist nicht Spekulation — es ist die rationale Antwort auf fiskalische
-            Dominanz.
-          </p>
-          <div class="card__footer">
-            <a href="#" class="card__link">Lesen →</a>
-            <span class="card__read">7 Min.</span>
+            <a href="artikel/blog-overview-approach.html" class="card__link" data-i18n="card.read-more">Lesen →</a>
+            <span class="card__read">3 Min.</span>
           </div>
         </article>
 
       </div>
 
       <div class="insights__more">
-        <a href="blog.html" class="btn btn--outline">Alle Artikel anzeigen</a>
+        <a href="blog.html" class="btn btn--outline" data-i18n="insights.more">Alle Artikel anzeigen</a>
       </div>
     </div>
   </section>
@@ -246,51 +237,51 @@
   <section class="themes" id="themes">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Schlüssel-<span class="gradient-text">Themen</span></h2>
-        <p class="section-sub">Die strukturellen Kräfte, die die Weltwirtschaft prägen</p>
+        <h2 class="section-title" data-i18n-html="themes.title">Schlüssel-<span class="gradient-text">Themen</span></h2>
+        <p class="section-sub" data-i18n="themes.sub">Die strukturellen Kräfte, die die Weltwirtschaft prägen</p>
       </div>
       <div class="themes__grid">
         <div class="theme-card">
           <div class="theme-card__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
           </div>
-          <h3>Zentralbanken &amp; Zinsen</h3>
-          <p>Fed, EZB, BoJ — Geldpolitik im Zeitalter fiskalischer Dominanz und hartnäckiger Inflation.</p>
+          <h3 data-i18n="theme1.title">Zentralbanken &amp; Zinsen</h3>
+          <p data-i18n="theme1.desc">Fed, EZB, BoJ - Geldpolitik im Zeitalter fiskalischer Dominanz und hartnäckiger Inflation.</p>
         </div>
         <div class="theme-card">
           <div class="theme-card__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-          <h3>Geopolitik &amp; Multipolarität</h3>
-          <p>USA vs. China, BRICS+, Dollar-Dominanz und die neue Weltordnung im Entstehen.</p>
+          <h3 data-i18n="theme2.title">Geopolitik &amp; Multipolarität</h3>
+          <p data-i18n="theme2.desc">USA vs. China, BRICS+, Dollar-Dominanz und die neue Weltordnung im Entstehen.</p>
         </div>
         <div class="theme-card">
           <div class="theme-card__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
-          <h3>Inflationsregime</h3>
-          <p>Strukturelle Inflation durch Deglobalisierung, Demographie und Dekarbonisierung.</p>
+          <h3 data-i18n="theme3.title">Inflationsregime</h3>
+          <p data-i18n="theme3.desc">Strukturelle Inflation durch Deglobalisierung, Demographie und Dekarbonisierung.</p>
         </div>
         <div class="theme-card">
           <div class="theme-card__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <h3>Schuldendynamiken</h3>
-          <p>Staatsverschuldung auf Rekordniveau weltweit — Wege aus der Schuldenfalle und ihre Folgen.</p>
+          <h3 data-i18n="theme4.title">Schuldendynamiken</h3>
+          <p data-i18n="theme4.desc">Staatsverschuldung auf Rekordniveau weltweit - Wege aus der Schuldenfalle und ihre Folgen.</p>
         </div>
         <div class="theme-card">
           <div class="theme-card__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
-          <h3>Rohstoffe &amp; Energie</h3>
-          <p>Gold, Öl, Kupfer — die Rohstoff-Superzyklus-These und die Energiewende als Preistreiber.</p>
+          <h3 data-i18n="theme5.title">Rohstoffe &amp; Energie</h3>
+          <p data-i18n="theme5.desc">Gold, Öl, Kupfer - die Rohstoff-Superzyklus-These und die Energiewende als Preistreiber.</p>
         </div>
         <div class="theme-card">
           <div class="theme-card__icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
-          <h3>Technologie &amp; KI-Makro</h3>
-          <p>KI als Produktivitäts-Schock — makroökonomische Konsequenzen für Arbeit, Kapital und Inflation.</p>
+          <h3 data-i18n="theme6.title">Technologie &amp; KI-Makro</h3>
+          <p data-i18n="theme6.desc">KI als Produktivitäts-Schock - makroökonomische Konsequenzen für Arbeit, Kapital und Inflation.</p>
         </div>
       </div>
     </div>
@@ -301,7 +292,7 @@
     <div class="container">
       <blockquote class="pull-quote">
         <span class="pull-quote__mark">"</span>
-        Makroökonomie ist kein Werkzeug für Vorhersagen —
+        Makroökonomie ist kein Werkzeug für Vorhersagen -
         es ist ein Rahmen, um die Welt zu verstehen und
         intelligentere Fragen zu stellen.
         <span class="pull-quote__mark">"</span>
@@ -312,29 +303,29 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container about__inner">
-      <div class="about__label">Über mich</div>
-      <h2 class="about__title">Lennart Rose — <span class="gradient-text">Macro Analyst</span></h2>
+      <div class="about__label" data-i18n="about.label">Über mich</div>
+      <h2 class="about__title">Lennart Rose - <span class="gradient-text">Macro Analyst</span></h2>
       <p class="about__text">
         Ich bin 22 Jahre alt, studiere Wirtschaftswissenschaften (B.Sc.) an der Universität Kassel
-        und habe dort seit 2022 eine echte Faszination für die Funktionsweise globaler Märkte entwickelt —
+        und habe dort seit 2022 eine echte Faszination für die Funktionsweise globaler Märkte entwickelt -
         angetrieben durch das Studium, durch mein persönliches Umfeld und durch die Frage, warum
         Wirtschaft so selten so erklärt wird, wie sie wirklich funktioniert.
       </p>
       <p class="about__text">
         Bevor die Finanzwelt mein Hauptthema wurde, war es der Fußball. Ich habe viele Jahre auf
-        semi-professionellem Niveau gespielt — von der Jugend in Heidelberg bis in den Herrenbereich
+        semi-professionellem Niveau gespielt - von der Jugend in Heidelberg bis in den Herrenbereich
         bei Hessen Kassel und Baunatal in der fünften Liga. Diese Zeit hat mir beigebracht, wie man
-        unter Druck strukturiert denkt, Systeme liest und Entscheidungen trifft — Fähigkeiten, die
+        unter Druck strukturiert denkt, Systeme liest und Entscheidungen trifft - Fähigkeiten, die
         ich heute anders einsetze.
       </p>
       <p class="about__text">
         Praktische Einblicke in Unternehmensfinanzen, Bewertung und Rechnungslegung habe ich als
         Praktikant und Werkstudent bei <strong>Jakob &amp; Sozien Steuerberatung | Wirtschaftsprüfung</strong>
-        in Kassel gesammelt (August 2023 – Oktober 2025): DCF-Bewertungen, M&amp;A-Beratung,
-        Jahresabschlüsse nach HGB — nah dran an dem, was Zahlen wirklich bedeuten.
+        in Kassel gesammelt (August 2023 - Oktober 2025): DCF-Bewertungen, M&amp;A-Beratung,
+        Jahresabschlüsse nach HGB - nah dran an dem, was Zahlen wirklich bedeuten.
       </p>
       <p class="about__text">
-        Rose Macro Insights ist mein Weg, makroökonomische Zusammenhänge zugänglich zu machen —
+        Rose Macro Insights ist mein Weg, makroökonomische Zusammenhänge zugänglich zu machen -
         ohne institutionellen Filter, aber mit dem Anspruch, den Dingen wirklich auf den Grund zu gehen.
       </p>
       <div class="about__links">
@@ -361,12 +352,12 @@
   <section class="subscribe" id="subscribe">
     <div class="container subscribe__inner">
       <div class="subscribe__glow"></div>
-      <div class="subscribe__tag">Newsletter</div>
-      <h2 class="subscribe__title">
+      <div class="subscribe__tag" data-i18n="subscribe.tag">Newsletter</div>
+      <h2 class="subscribe__title" data-i18n-html="subscribe.title">
         Macro Insights direkt<br />in deinen Posteingang
       </h2>
-      <p class="subscribe__sub">
-        Wöchentliche Tiefenanalysen, Marktkommentare und exklusive Einblicke —
+      <p class="subscribe__sub" data-i18n="subscribe.sub">
+        Wöchentliche Tiefenanalysen, Marktkommentare und exklusive Einblicke -
         kostenlos und ohne Spam.
       </p>
       <form class="subscribe__form" id="subscribe-form">
@@ -376,11 +367,12 @@
           placeholder="deine@email.com"
           required
           aria-label="E-Mail-Adresse"
+          data-i18n-placeholder="subscribe.placeholder"
         />
-        <button type="submit" class="btn btn--primary">Abonnieren</button>
+        <button type="submit" class="btn btn--primary" data-i18n="subscribe.btn">Abonnieren</button>
       </form>
-      <p class="subscribe__note">Kein Spam. Jederzeit abmeldbar.</p>
-      <div class="subscribe__success" id="subscribe-success">
+      <p class="subscribe__note" data-i18n="subscribe.note">Kein Spam. Jederzeit abmeldbar.</p>
+      <div class="subscribe__success" id="subscribe-success" data-i18n="subscribe.success">
         Danke! Du erhältst jetzt wöchentliche Macro Insights.
       </div>
     </div>
@@ -390,38 +382,39 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="nav__logo">
+        <a href="index.html" class="nav__logo">
           <span class="logo-rose">Rose</span><span class="logo-macro"> Macro Insights</span>
         </a>
-        <p class="footer__tagline">Global Macro. Klar analysiert.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Global Macro. Klar analysiert.</p>
       </div>
       <div class="footer__links">
         <div class="footer__col">
-          <h4>Seiten</h4>
-          <a href="index.html">Home</a>
-          <a href="blog.html">Blog</a>
-          <a href="ueber-mich.html">Über mich</a>
+          <h4 data-i18n="footer.col1">Seiten</h4>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="blog.html" data-i18n="nav.blog">Blog</a>
+          <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
         </div>
         <div class="footer__col">
-          <h4>Blog</h4>
-          <a href="blog.html">Alle Artikel</a>
-          <a href="artikel/das-ende-der-alten-ordnung.html">Featured</a>
-          <a href="#subscribe">Newsletter</a>
+          <h4 data-i18n="footer.col2">Blog</h4>
+          <a href="blog.html" data-i18n="footer.all-articles">Alle Artikel</a>
+          <a href="artikel/das-ende-der-alten-ordnung.html" data-i18n="footer.featured">Featured</a>
+          <a href="#subscribe" data-i18n="footer.newsletter">Newsletter</a>
         </div>
         <div class="footer__col">
-          <h4>Kontakt</h4>
+          <h4 data-i18n="footer.col3">Kontakt</h4>
           <a href="https://www.linkedin.com/in/lennartrose" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:roselennart11@gmail.com">E-Mail</a>
-          <a href="ueber-mich.html">Über mich</a>
+          <a href="ueber-mich.html" data-i18n="nav.about">Über mich</a>
         </div>
       </div>
     </div>
     <div class="footer__bottom container">
-      <span>© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
-      <span class="footer__disclaimer">Keine Anlageberatung. Nur zur Information.</span>
+      <span data-i18n="footer.copyright">© 2026 Rose Macro Insights. Alle Rechte vorbehalten.</span>
+      <span class="footer__disclaimer" data-i18n="footer.disclaimer">Keine Anlageberatung. Nur zur Information.</span>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
