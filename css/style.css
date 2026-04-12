@@ -935,6 +935,14 @@ img { max-width: 100%; display: block; }
   transition: color var(--transition);
 }
 .blog-card__title a:hover { color: var(--blue-300); }
+/* Whole blog-card clickable via title-link overlay */
+.blog-card { cursor: pointer; }
+.blog-card__title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 .blog-card__excerpt { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; flex: 1; }
 .blog-card__footer {
   display: flex; align-items: center; justify-content: space-between;
