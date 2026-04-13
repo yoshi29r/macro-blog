@@ -54,6 +54,9 @@
   --tag-violet-bg: rgba(124, 58, 237, 0.18);
   --tag-violet-c:  #c4b5fd;
   --tag-violet-bd: rgba(139, 92, 246, 0.3);
+  --tag-orange-bg: rgba(234, 88, 12, 0.18);
+  --tag-orange-c:  #fb923c;
+  --tag-orange-bd: rgba(251, 146, 60, 0.3);
 }
 
 /* ── LIGHT MODE ── */
@@ -89,6 +92,9 @@
     --tag-violet-bg: rgba(124, 58, 237, 0.1);
     --tag-violet-c:  #6d28d9;
     --tag-violet-bd: rgba(124, 58, 237, 0.25);
+    --tag-orange-bg: rgba(234, 88, 12, 0.1);
+    --tag-orange-c:  #c2410c;
+    --tag-orange-bd: rgba(234, 88, 12, 0.25);
   }
 }
 
@@ -169,6 +175,7 @@ img { max-width: 100%; display: block; }
 .tag--blue   { background: var(--tag-blue-bg);   color: var(--tag-blue-c);   border: 1px solid var(--tag-blue-bd); }
 .tag--teal   { background: var(--tag-teal-bg);   color: var(--tag-teal-c);   border: 1px solid var(--tag-teal-bd); }
 .tag--violet { background: var(--tag-violet-bg); color: var(--tag-violet-c); border: 1px solid var(--tag-violet-bd); }
+.tag--orange { background: var(--tag-orange-bg); color: var(--tag-orange-c); border: 1px solid var(--tag-orange-bd); }
 
 /* ── GRADIENT TEXT ── */
 .gradient-text {
@@ -649,9 +656,9 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--border-soft);
 }
 .pull-quote {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.4rem, 2.8vw, 2.2rem);
-  font-style: italic;
+  font-style: normal;
   color: var(--text-primary);
   text-align: center;
   max-width: 800px;

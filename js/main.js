@@ -12,17 +12,27 @@ window.addEventListener('scroll', () => {
 const burger = document.getElementById('burger');
 const dropdown = document.getElementById('nav-dropdown');
 
+function positionDropdown() {
+  const rect = burger.getBoundingClientRect();
+  dropdown.style.left = rect.left + 'px';
+}
+
 burger.addEventListener('click', () => {
   const isOpen = dropdown.classList.toggle('open');
   burger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
   const spans = burger.querySelectorAll('span');
   if (isOpen) {
+    positionDropdown();
     spans[0].style.transform = 'translateY(7px) rotate(45deg)';
     spans[1].style.opacity = '0';
     spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
   } else {
     spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   }
+});
+
+window.addEventListener('resize', () => {
+  if (dropdown.classList.contains('open')) positionDropdown();
 });
 
 // Close dropdown when clicking a link inside it
