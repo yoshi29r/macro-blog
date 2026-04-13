@@ -77,8 +77,8 @@
   margin: 32px 0 12px;
 }
 .artikel__body blockquote {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-style: normal;
   font-size: 1.2rem;
   color: var(--text-muted);
   border-left: 3px solid var(--gradient-main);
