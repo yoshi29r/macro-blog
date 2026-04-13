@@ -19,7 +19,7 @@
   --font-serif: 'Playfair Display', Georgia, serif;
   --radius: 12px;
   --radius-lg: 20px;
-  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.32s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ── DARK MODE (default) ── */
@@ -320,17 +320,17 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(20px);
   border-right: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
-  border-radius: 0 0 12px 0;
-  box-shadow: 4px 8px 24px rgba(0,0,0,0.2);
+  border-radius: 0 0 14px 0;
+  box-shadow: 6px 12px 32px rgba(0,0,0,0.22);
   overflow: hidden;
   max-height: 0;
-  min-width: 180px;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 210px;
+  transition: max-height 0.52s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 99;
 }
-.nav__dropdown.open { max-height: 220px; }
+.nav__dropdown.open { max-height: 300px; }
 .nav__dropdown-inner {
-  padding: 12px 8px;
+  padding: 16px 10px 18px;
   width: auto;
   max-width: none;
   margin: 0;
@@ -338,20 +338,34 @@ img { max-width: 100%; display: block; }
 .nav__drop-links {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 .nav__drop-link {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--text-muted);
-  transition: all var(--transition);
+  transition: background var(--transition), color var(--transition);
   white-space: nowrap;
+  opacity: 0;
 }
+/* Chain / stagger animation on open */
+.nav__dropdown.open .nav__drop-link {
+  animation: navLinkIn 0.38s ease forwards;
+}
+.nav__dropdown.open .nav__drop-link:nth-child(1) { animation-delay: 0.10s; }
+.nav__dropdown.open .nav__drop-link:nth-child(2) { animation-delay: 0.22s; }
+.nav__dropdown.open .nav__drop-link:nth-child(3) { animation-delay: 0.34s; }
+
+@keyframes navLinkIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 .nav__drop-link:hover,
 .nav__drop-link--active {
   background: var(--bg-card);
@@ -361,7 +375,7 @@ img { max-width: 100%; display: block; }
 .nav__drop-cta { flex-shrink: 0; }
 
 @media (max-width: 640px) {
-  .nav__dropdown-inner { padding: 10px 8px; }
+  .nav__dropdown-inner { padding: 12px 8px 14px; }
 }
 
 /* =====================================================
